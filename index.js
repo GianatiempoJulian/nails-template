@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PUERTO = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.sendFile('..index.html', { root: __dirname })
+    res.send("Hola");
 });
 
-app.listen(PUERTO, () => {
-    console.log(`El servidor esta escuchando en el puerto ${PUERTO}`);
+app.listen(PORT, () => {
+    console.log(`El servidor esta escuchando en el puerto ${PORT}`);
 });
